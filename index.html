@@ -124,28 +124,6 @@
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- Replace these videos if available -->
-        <div class="item item-placeholder">
-          <video poster="" id="must-video1" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sample1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-placeholder">
-          <video poster="" id="must-video2" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/sample2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -179,14 +157,13 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">MuST Architecture</h2>
         <p>
-          Interpolating surgical video phases using our MuST framework, allowing smoother transition and recognition in varying temporal scales.
+          MuST employs a Multi-Term Frame Encoder to generate rich embeddings containing short- and mid-term dependencies for a long-term sequence of F′ frames. The Temporal Consistency Module introduces long-term analysis by processing relationships among frame embeddings to enable coherence in the predictions. 
         </p>
-        <video id="animation-video" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/animation.mp4"
-                  type="video/mp4">
-        </video>
+        <img src="./static/images/main_architecture.pdf"
+        class="interpolation-image"
+        alt="Interpolate start reference image."/>
       </div>
     </div>
   </div>
