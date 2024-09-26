@@ -154,10 +154,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Phase recognition in surgical videos is crucial for enhancing computer-aided surgical systems. Existing methods often rely on fixed temporal windows, struggling to capture short-, mid-, and long-term information. We propose Multi-Scale Transformers for Surgical Phase Recognition (MuST), a novel approach that captures multi-scale temporal context using a Transformer-based framework.
-          </p>
-          <p>
-            Our method introduces a Multi-Term Frame Encoder and a Temporal Consistency Module to model short-, mid-, and long-term temporal dependencies, enabling robust surgical phase recognition across variable phase durations. We demonstrate the superiority of MuST on multiple surgical benchmarks.
+          Phase recognition in surgical videos is crucial for enhancing computer-aided surgical systems as it enables automated understanding of sequential procedural stages. Existing methods often rely on fixed temporal windows for video analysis to identify dynamic surgical phases. Thus, they struggle to simultaneously capture short-, mid-, and longterm information necessary to fully understand complex surgical procedures. To address these issues, we propose Multi-Scale Transformers for Surgical Phase Recognition (MuST), a novel Transformer-based approach that combines a Multi-Term Frame encoder with a Temporal Consistency Module to capture information across multiple temporal scales of a surgical video. Our Multi-Term Frame Encoder computes interdependencies across a hierarchy of temporal scales by sampling sequences at increasing strides around the frame of interest. Furthermore, we employ a long-term Transformer encoder over the frame embeddings to further enhance long-term reasoning. MuST achieves higher performance than previous state-of-the-art methods on three different public benchmarks.
           </p>
         </div>
       </div>
