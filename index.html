@@ -142,60 +142,55 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <div class="columns is-centered">
+    
+    <!-- MuST Architecture Section -->
+    <h2 class="title is-3">MuST Architecture</h2>
+    <p>
+      MuST employs a Multi-Term Frame Encoder to generate rich embeddings containing short- and mid-term dependencies for a long-term sequence of F′ frames. The Temporal Consistency Module introduces long-term analysis by processing relationships among frame embeddings to enable coherence in the predictions. 
+    </p>
+    <img src="./static/images/main_architecture.jpg"
+      class="interpolation-image"
+      alt="MuST main architecture."/>
 
-      <div class="column">
-        <h2 class="title is-3">MuST Architecture</h2>
-        <p>
-          MuST employs a Multi-Term Frame Encoder to generate rich embeddings containing short- and mid-term dependencies for a long-term sequence of F′ frames. The Temporal Consistency Module introduces long-term analysis by processing relationships among frame embeddings to enable coherence in the predictions. 
-        </p>
-        <img src="./static/images/main_architecture.jpg"
-        class="interpolation-image"
-        alt="MuSt main architecture."/>
+    <p>
+      The MuST Multi-Term Frame Encoder captures temporal context in surgical videos by constructing a temporal pyramid around a keyframe. This allows it to extract features across short-, mid-, and long-term time scales, providing a rich understanding of the surgical procedure's dynamics. The encoder generates spatio-temporal embeddings for each time scale, which are combined using attention mechanisms to understand relationships between different phases. This flexibility enables accurate phase recognition by handling both rapid transitions and longer-term changes within the video.
+    </p>
+    <img src="./static/images/frame_encoder_arch.jpg"
+      class="interpolation-image"
+      alt="MuST frame encoder architecture."/>
 
-        <p>
-          The MuST Multi-Term Frame Encoder captures temporal context in surgical videos by constructing a temporal pyramid around a keyframe. This allows it to extract features across short-, mid-, and long-term time scales, providing a rich understanding of the surgical procedure's dynamics. The encoder generates spatio-temporal embeddings for each time scale, which are combined using attention mechanisms to understand relationships between different phases. This flexibility enables accurate phase recognition by handling both rapid transitions and longer-term changes within the video.
-        </p>
-        <img src="./static/images/frame_encoder_arch.jpg"
-        class="interpolation-image"
-        alt="MuSt main architecture."/>
+    <p>
+      This is an illustration of a temporal multisequence pyramid centered on the red keyframe. Sampled frames at each level are highlighted. The top levels of the pyramid capture short-term temporal information, while the lower levels comprehend a broader temporal context.
+    </p>
+    <img src="./static/images/temporal_pyramid.png"
+      class="interpolation-image"
+      alt="MuST temporal pyramid."/>
 
-        <p>
-          This is an illustration of a temporal multisequence pyramid centered on the red keyframe. Sampled frames at each level are highlighted. The top levels of the pyramid capture short-term temporal information, while the lower levels comprehend a broader temporal context.
-        </p>
-        <img src="./static/images/temporal_pyramid.png"
-        class="interpolation-image"
-        alt="MuSt main architecture."/>
+    <!-- Attention Heads Visualization Section -->
+    <h2 class="title is-3">Attention Heads Visualization</h2>
+    <p>
+      The Cross-Attention Module in MuST enhances temporal understanding by computing relationships between different time scales. It enables the model to align and compare information from various temporal windows, capturing both short-term and long-term dependencies. This mechanism ensures that the model comprehensively understands phase transitions and interactions across the entire surgical video.
+    </p>
+    <img src="./static/images/attention_heads.jpg"
+      class="interpolation-image"
+      alt="MuST attention heads visualization."/>
 
-      </div>
+    <!-- Quantitative Results Section -->
+    <h2 class="title is-3">Quantitative Results</h2>
+    <p>
+      MuST consistently outperforms previous state-of-the-art methods in public benchmarks.
+    </p>
+    <img src="./static/images/main_results.png"
+      class="interpolation-image"
+      alt="MuST benchmark results."/>
 
-      <div class="column">
-        <h2 class="title is-3">Attention Heads Visualization</h2>
-        <p>
-          The Cross-Attention Module in MuST enhances temporal understanding by computing relationships between different time scales. It enables the model to align and compare information from various temporal windows, capturing both short-term and long-term dependencies. This mechanism ensures that the model comprehensively understands phase transitions and interactions across the entire surgical video.
-        </p>
-        <img src="./static/images/attention_heads.jpg"
-        class="interpolation-image"
-        alt="MuSt attention head."/>
-      </div>
+    <p>
+      Consistent results across classes are evident across diverse temporalities within the databases. These results underscore MuST’s proficiency in identifying multiple duration phases, attributed to its multitemporal reasoning. Leveraging information from distinct temporal contexts enhances MuST’s predictive capabilities for phases of different durations. The best results are highlighted in bold.
+    </p>
+    <img src="./static/images/per-class_results.png"
+      class="interpolation-image"
+      alt="MuST per-class results."/>
 
-      <div class="column">
-        <h2 class="title is-3">Quantitative Results</h2>
-        <p>
-          MuST consistently outperforms previous state-of-the-art methods in public benchmarks.
-        </p>
-        <img src="./static/images/main_results.png"
-        class="interpolation-image"
-        alt="MuSt attention head."/>
-        <p>
-          Consistent results across classes are evident across diverse temporalities within the databases. These results underscore MuST’s proficiency in identifying multiple duration phases, attributed to its multitemporal reasoning. Leveraging information from distinct temporal contexts enhances MuST’s predictive capabilities for phases of different durations. The best results are highlighted in bold.
-        </p>
-        <img src="./static/images/per-class_results.png"
-        class="interpolation-image"
-        alt="MuSt attention head."/>
-      </div>
-
-    </div>
   </div>
 </section>
 
